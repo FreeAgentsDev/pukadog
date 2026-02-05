@@ -1,106 +1,79 @@
 'use client'
 
-import { FiInstagram, FiPhone, FiMail } from 'react-icons/fi'
+import { FiInstagram, FiPhone } from 'react-icons/fi'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-pukadog-ink text-pukadog-beige">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">PD</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white font-display">
-                  Puka<span className="text-primary-400">Dog</span>
-                </h3>
-                <p className="text-xs text-gray-400">Manizales</p>
-              </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-bold font-display tracking-tight">
+                Pukadog
+              </h3>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-pukadog-beige/80">Hotdogs</p>
             </div>
-            <p className="text-sm text-gray-400">
-              Los mejores puka dogs de Manizales. Preparados con amor e ingredientes frescos.
+            <p className="slogan-serif text-sm not-italic text-pukadog-beige/90">
+              Menos excesos, más bienestar.
+            </p>
+            <p className="text-sm text-pukadog-beige/70 mt-2">
+              Manizales · Ingredientes frescos, salsas naturales.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="font-semibold mb-4 font-display">Enlaces</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#inicio"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
-                >
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#menu"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
-                >
-                  Menú
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#armar-pedido"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
-                >
-                  Armar Pedido
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#nosotros"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
-                >
-                  Nosotros
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacto"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
-                >
-                  Contacto
-                </a>
-              </li>
+              {['Inicio', 'Menú', 'Armar Pedido', 'Nosotros', 'Contacto'].map((label, i) => {
+                const hrefs = ['#inicio', '#menu', '#armar-pedido', '#nosotros', '#contacto']
+                return (
+                  <li key={label}>
+                    <a
+                      href={hrefs[i]}
+                      className="text-pukadog-beige/80 hover:text-pukadog-beige transition-colors text-sm"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Síguenos</h4>
+            <h4 className="font-semibold mb-4 font-display">Síguenos</h4>
             <div className="space-y-3">
               <a
                 href="https://www.instagram.com/pukadogcolombia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors text-sm"
+                className="flex items-center gap-2 text-pukadog-beige/80 hover:text-pukadog-beige transition-colors text-sm"
               >
                 <FiInstagram className="w-5 h-5" />
                 @pukadogcolombia
               </a>
               <a
-                href="tel:+573001234567"
-                className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors text-sm"
+                href="https://wa.me/message/UIEXFFM63W4BO1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-pukadog-beige/80 hover:text-pukadog-beige transition-colors text-sm"
               >
                 <FiPhone className="w-5 h-5" />
-                +57 300 123 4567
+                318 850 7284
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            © {currentYear} PukaDog Manizales. Todos los derechos reservados.
+        <div className="border-t border-pukadog-beige/20 pt-8 text-center">
+          <p className="text-sm text-pukadog-beige/60">
+            © {currentYear} Pukadog Manizales. Todos los derechos reservados.
           </p>
         </div>
       </div>

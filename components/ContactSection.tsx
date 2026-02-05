@@ -4,11 +4,11 @@ import { FiMapPin, FiPhone, FiMail, FiInstagram, FiClock } from 'react-icons/fi'
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="contacto" className="py-20 bg-pukadog-beige">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Contáctanos</h2>
         <p className="section-subtitle">
-          Estamos aquí para servirte. Visítanos o contáctanos para hacer tu pedido
+          Visítanos o escríbenos para hacer tu pedido
         </p>
 
         <div className="max-w-6xl mx-auto">
@@ -17,12 +17,12 @@ export default function ContactSection() {
             <div className="space-y-6">
               <div className="card p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FiMapPin className="w-6 h-6 text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-pukadog-ink rounded-lg flex items-center justify-center">
+                    <FiMapPin className="w-6 h-6 text-pukadog-beige" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Ubicación</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">Ubicación</h3>
+                    <p className="text-pukadog-inkLight">
                       Calle 63 # 24-41, Barrio Palogrande
                       <br />
                       <span className="text-sm">Cerca al coliseo, Manizales</span>
@@ -33,16 +33,16 @@ export default function ContactSection() {
 
               <div className="card p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FiPhone className="w-6 h-6 text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-pukadog-ink rounded-lg flex items-center justify-center">
+                    <FiPhone className="w-6 h-6 text-pukadog-beige" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Teléfono / WhatsApp</h3>
+                    <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">Teléfono / WhatsApp</h3>
                     <a
                       href="https://wa.me/message/UIEXFFM63W4BO1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-600 hover:text-primary-700 font-medium"
+                      className="text-pukadog-ink hover:underline font-medium"
                     >
                       318 850 7284
                     </a>
@@ -51,7 +51,7 @@ export default function ContactSection() {
                       href="https://wa.me/message/UIEXFFM63W4BO1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-primary-500 hover:text-primary-600 mt-1 inline-block"
+                      className="text-sm text-pukadog-inkLight hover:text-pukadog-ink mt-1 inline-block"
                     >
                       Abrir WhatsApp
                     </a>
@@ -61,16 +61,16 @@ export default function ContactSection() {
 
               <div className="card p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FiInstagram className="w-6 h-6 text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-pukadog-ink rounded-lg flex items-center justify-center">
+                    <FiInstagram className="w-6 h-6 text-pukadog-beige" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Instagram</h3>
+                    <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">Instagram</h3>
                     <a
                       href="https://www.instagram.com/pukadogcolombia/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-600 hover:text-primary-700 font-medium"
+                      className="text-pukadog-ink hover:underline font-medium"
                     >
                       @pukadogcolombia
                     </a>
@@ -80,12 +80,12 @@ export default function ContactSection() {
 
               <div className="card p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FiClock className="w-6 h-6 text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-pukadog-ink rounded-lg flex items-center justify-center">
+                    <FiClock className="w-6 h-6 text-pukadog-beige" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Horarios</h3>
-                    <div className="text-gray-600 space-y-1">
+                    <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">Horarios</h3>
+                    <div className="text-pukadog-inkLight space-y-1">
                       <p>Lunes - Viernes: 11:00 AM - 9:00 PM</p>
                       <p>Sábados: 12:00 PM - 10:00 PM</p>
                       <p>Domingos: 12:00 PM - 8:00 PM</p>
@@ -97,13 +97,13 @@ export default function ContactSection() {
 
             {/* Map Placeholder */}
             <div className="card p-6 h-full">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Encuéntranos</h3>
-              <div className="relative h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg overflow-hidden">
+              <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Encuéntranos</h3>
+              <div className="relative h-96 bg-pukadog-beigeDark/20 rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <FiMapPin className="w-16 h-16 text-primary-600 mx-auto mb-4" />
-                    <p className="text-gray-600 font-medium">Calle 63 # 24-41</p>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <FiMapPin className="w-16 h-16 text-pukadog-ink mx-auto mb-4" />
+                    <p className="text-pukadog-inkLight font-medium">Calle 63 # 24-41</p>
+                    <p className="text-sm text-pukadog-inkMuted mt-2">
                       Barrio Palogrande, Manizales
                     </p>
                   </div>
