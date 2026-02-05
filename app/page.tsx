@@ -31,7 +31,7 @@ export default function Home() {
   const cartTotal = cartItems.reduce((sum, item) => sum + item.price, 0)
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-pukadog-beige">
       <Header cartCount={cartItems.length} onCartClick={() => setIsCartOpen(true)} />
       <Hero />
       <MenuSection onAddToCart={addToCart} />

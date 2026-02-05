@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+:root {
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --font-lora: 'Lora', Georgia, serif;
+}
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-pukadog-beige text-pukadog-ink antialiased;
+    font-family: var(--font-dm-sans);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-pukadog-ink hover:bg-pukadog-ink/90 text-pukadog-beige font-semibold py-3 px-6 rounded-lg transition-all duration-200;
   }
   
   .btn-secondary {
-    @apply bg-secondary-600 hover:bg-secondary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-transparent border-2 border-pukadog-ink text-pukadog-ink hover:bg-pukadog-ink hover:text-pukadog-beige font-semibold py-3 px-6 rounded-lg transition-all duration-200;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+    @apply bg-white/80 backdrop-blur-sm rounded-xl border border-pukadog-beigeDark/30 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden;
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center;
+    @apply text-4xl md:text-5xl font-bold text-pukadog-ink mb-4 text-center font-display;
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto;
+    @apply text-lg md:text-xl text-pukadog-inkLight mb-12 text-center max-w-2xl mx-auto font-sans;
+  }
+  
+  .slogan-serif {
+    @apply font-serif italic text-pukadog-ink;
   }
 }
