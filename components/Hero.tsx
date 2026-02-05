@@ -16,30 +16,35 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-pukadog-beige pt-20 overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-display">
-            Los Mejores{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              Puka Dogs
+          {/* Líneas decorativas estilo logo */}
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span className="block w-12 h-px bg-pukadog-ink/30" />
+            <span className="text-xs uppercase tracking-[0.25em] text-pukadog-inkLight font-light">
+              Manizales
             </span>
-            <br />
-            de Manizales
-          </h1>
+            <span className="block w-12 h-px bg-pukadog-ink/30" />
+          </div>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            {data?.profile.biography || 'Disfruta de nuestros deliciosos puka dogs artesanales con ingredientes frescos y de la más alta calidad. Personaliza tu pedido a tu gusto.'}
+          {/* Main Heading - tipografía estilo Pukadog */}
+          <h1 className="text-5xl md:text-7xl font-bold text-pukadog-ink mb-4 font-display tracking-tight">
+            Pukadog
+          </h1>
+          <p className="text-xl md:text-2xl uppercase tracking-widest text-pukadog-ink font-light mb-8">
+            Hotdogs
+          </p>
+
+          {/* Slogan en serif - "Menos excesos más bienestar" */}
+          <p className="slogan-serif text-xl md:text-2xl mb-10 max-w-xl mx-auto">
+            Menos excesos, más bienestar
+          </p>
+
+          {/* Descripción */}
+          <p className="text-lg text-pukadog-inkLight mb-10 max-w-2xl mx-auto">
+            {data?.profile.biography || 'Hotdogs con salsas naturales, ingredientes frescos y pan artesanal. Una pausa consciente en cada bocado.'}
           </p>
 
           {/* CTA Buttons */}
@@ -48,7 +53,7 @@ export default function Hero() {
               onClick={scrollToMenu}
               className="btn-primary text-lg px-8 py-4 w-full sm:w-auto"
             >
-              Ver Menú Completo
+              Ver Menú
             </button>
             <button
               onClick={() => {
@@ -57,23 +62,19 @@ export default function Hero() {
               }}
               className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto"
             >
-              Armar Mi Pedido
+              Armar mi pedido
             </button>
           </div>
 
           {/* Scroll Indicator */}
           <button
             onClick={scrollToMenu}
-            className="animate-bounce text-gray-400 hover:text-primary-600 transition-colors"
-            aria-label="Scroll to menu"
+            className="animate-bounce text-pukadog-inkMuted hover:text-pukadog-ink transition-colors"
+            aria-label="Bajar al menú"
           >
             <FiArrowDown className="w-8 h-8 mx-auto" />
           </button>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-10 w-32 h-32 bg-primary-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-40 h-40 bg-secondary-200 rounded-full opacity-20 blur-3xl"></div>
       </div>
     </section>
   )
