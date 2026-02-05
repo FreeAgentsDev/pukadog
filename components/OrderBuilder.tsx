@@ -122,11 +122,11 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
   const ingredientCategories = ['quesos', 'carnes', 'vegetales', 'extras']
 
   return (
-    <section id="armar-pedido" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="armar-pedido" className="py-20 bg-pukadog-beigeLight">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Arma Tu Puka Dog</h2>
+        <h2 className="section-title">Arma tu Pukadog</h2>
         <p className="section-subtitle">
-          Personaliza tu puka dog con tus ingredientes favoritos. ¡Crea la combinación perfecta!
+          Elige base, ingredientes y salsas. La combinación perfecta, a tu gusto.
         </p>
 
         <div className="max-w-6xl mx-auto">
@@ -135,11 +135,11 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
             <div className="lg:col-span-2 space-y-6">
               {/* Base Options */}
               <div className="card p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Base</h3>
+                <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Base</h3>
                 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-pukadog-inkLight mb-2">
                       Salchicha
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -149,18 +149,18 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                           onClick={() => setSelectedSalchicha(option.id)}
                           className={`p-3 rounded-lg border-2 transition-all ${
                             selectedSalchicha === option.id
-                              ? 'border-primary-600 bg-primary-50'
-                              : 'border-gray-200 hover:border-primary-300'
+                              ? 'border-pukadog-ink bg-pukadog-beige'
+                              : 'border-pukadog-beigeDark/30 hover:border-pukadog-ink/40'
                           }`}
                         >
                           <div className="flex items-center justify-between">
                             <span className="font-medium text-sm">{option.name}</span>
                             {selectedSalchicha === option.id && (
-                              <FiCheck className="w-5 h-5 text-primary-600" />
+                              <FiCheck className="w-5 h-5 text-pukadog-ink" />
                             )}
                           </div>
                           {option.price > 0 && (
-                            <span className="text-xs text-gray-600 mt-1">
+                            <span className="text-xs text-pukadog-inkLight mt-1">
                               +{formatPrice(option.price)}
                             </span>
                           )}
@@ -170,7 +170,7 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-pukadog-inkLight mb-2">
                       Pan
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -180,18 +180,18 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                           onClick={() => setSelectedPan(option.id)}
                           className={`p-3 rounded-lg border-2 transition-all ${
                             selectedPan === option.id
-                              ? 'border-primary-600 bg-primary-50'
-                              : 'border-gray-200 hover:border-primary-300'
+                              ? 'border-pukadog-ink bg-pukadog-beige'
+                              : 'border-pukadog-beigeDark/30 hover:border-pukadog-ink/40'
                           }`}
                         >
                           <div className="flex items-center justify-between">
                             <span className="font-medium text-sm">{option.name}</span>
                             {selectedPan === option.id && (
-                              <FiCheck className="w-5 h-5 text-primary-600" />
+                              <FiCheck className="w-5 h-5 text-pukadog-ink" />
                             )}
                           </div>
                           {option.price > 0 && (
-                            <span className="text-xs text-gray-600 mt-1">
+                            <span className="text-xs text-pukadog-inkLight mt-1">
                               +{formatPrice(option.price)}
                             </span>
                           )}
@@ -204,7 +204,7 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
 
               {/* Ingredients */}
               <div className="card p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Ingredientes</h3>
+                <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Ingredientes</h3>
                 <div className="space-y-4">
                   {ingredientCategories.map((category) => {
                     const categoryIngredients = ingredients.filter(
@@ -212,7 +212,7 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                     )
                     return (
                       <div key={category}>
-                        <h4 className="text-sm font-semibold text-gray-700 mb-2 capitalize">
+                        <h4 className="text-sm font-semibold text-pukadog-inkLight mb-2 capitalize">
                           {category}
                         </h4>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -222,18 +222,18 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                               onClick={() => toggleIngredient(ingredient.id)}
                               className={`p-2 rounded-lg border-2 transition-all text-left ${
                                 selectedIngredients.includes(ingredient.id)
-                                  ? 'border-primary-600 bg-primary-50'
-                                  : 'border-gray-200 hover:border-primary-300'
+                                  ? 'border-pukadog-ink bg-pukadog-beige'
+                                  : 'border-pukadog-beigeDark/30 hover:border-pukadog-ink/40'
                               }`}
                             >
                               <div className="flex items-center justify-between">
                                 <span className="text-sm font-medium">{ingredient.name}</span>
                                 {selectedIngredients.includes(ingredient.id) && (
-                                  <FiCheck className="w-4 h-4 text-primary-600 flex-shrink-0" />
+                                  <FiCheck className="w-4 h-4 text-pukadog-ink flex-shrink-0" />
                                 )}
                               </div>
                               {ingredient.price > 0 && (
-                                <span className="text-xs text-gray-600">
+                                <span className="text-xs text-pukadog-inkLight">
                                   +{formatPrice(ingredient.price)}
                                 </span>
                               )}
@@ -248,7 +248,7 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
 
               {/* Salsas */}
               <div className="card p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Salsas</h3>
+                <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Salsas</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {salsas.map((salsa) => (
                     <button
@@ -256,18 +256,18 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                       onClick={() => toggleSalsa(salsa.id)}
                       className={`p-2 rounded-lg border-2 transition-all ${
                         selectedSalsas.includes(salsa.id)
-                          ? 'border-primary-600 bg-primary-50'
-                          : 'border-gray-200 hover:border-primary-300'
+                          ? 'border-pukadog-ink bg-pukadog-beige'
+                          : 'border-pukadog-beigeDark/30 hover:border-pukadog-ink/40'
                       }`}
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">{salsa.name}</span>
                         {selectedSalsas.includes(salsa.id) && (
-                          <FiCheck className="w-4 h-4 text-primary-600" />
+                          <FiCheck className="w-4 h-4 text-pukadog-ink" />
                         )}
                       </div>
                       {salsa.price > 0 && (
-                        <span className="text-xs text-gray-600">
+                        <span className="text-xs text-pukadog-inkLight">
                           +{formatPrice(salsa.price)}
                         </span>
                       )}
@@ -280,26 +280,26 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
             {/* Summary Panel */}
             <div className="lg:col-span-1">
               <div className="card p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Resumen</h3>
+                <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Resumen</h3>
                 
                 <div className="space-y-4 mb-6">
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-2">Salchicha seleccionada:</p>
+                  <div className="p-4 bg-pukadog-beige/50 rounded-lg">
+                    <p className="text-sm text-pukadog-inkLight mb-2">Salchicha seleccionada:</p>
                     <p className="font-medium">
                       {baseOptions.salchicha.find((s) => s.id === selectedSalchicha)?.name}
                     </p>
                   </div>
                   
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-2">Pan seleccionado:</p>
+                  <div className="p-4 bg-pukadog-beige/50 rounded-lg">
+                    <p className="text-sm text-pukadog-inkLight mb-2">Pan seleccionado:</p>
                     <p className="font-medium">
                       {baseOptions.pan.find((p) => p.id === selectedPan)?.name}
                     </p>
                   </div>
 
                   {selectedIngredients.length > 0 && (
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                      <p className="text-sm text-gray-600 mb-2">Ingredientes extras:</p>
+                    <div className="p-4 bg-pukadog-beige/50 rounded-lg">
+                      <p className="text-sm text-pukadog-inkLight mb-2">Ingredientes extras:</p>
                       <ul className="text-sm space-y-1">
                         {selectedIngredients.map((id) => {
                           const ing = ingredients.find((i) => i.id === id)
@@ -309,8 +309,8 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                     </div>
                   )}
 
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-2">Salsas:</p>
+                  <div className="p-4 bg-pukadog-beige/50 rounded-lg">
+                    <p className="text-sm text-pukadog-inkLight mb-2">Salsas:</p>
                     <ul className="text-sm space-y-1">
                       {selectedSalsas.map((id) => {
                         const salsa = salsas.find((s) => s.id === id)
@@ -322,18 +322,18 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
 
                 <div className="border-t pt-4 mb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-gray-600">Cantidad:</span>
+                    <span className="text-sm text-pukadog-inkLight">Cantidad:</span>
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="p-1 rounded-lg border border-gray-300 hover:bg-gray-100"
+                        className="p-1 rounded-lg border border-pukadog-beigeDark/40 hover:bg-pukadog-beige"
                       >
                         <FiMinus className="w-4 h-4" />
                       </button>
                       <span className="font-bold text-lg w-8 text-center">{quantity}</span>
                       <button
                         onClick={() => setQuantity(quantity + 1)}
-                        className="p-1 rounded-lg border border-gray-300 hover:bg-gray-100"
+                        className="p-1 rounded-lg border border-pukadog-beigeDark/40 hover:bg-pukadog-beige"
                       >
                         <FiPlus className="w-4 h-4" />
                       </button>
@@ -341,7 +341,7 @@ export default function OrderBuilder({ onAddToCart }: OrderBuilderProps) {
                   </div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-lg font-semibold">Total:</span>
-                    <span className="text-2xl font-bold text-primary-600">
+                    <span className="text-2xl font-bold text-pukadog-ink">
                       {formatPrice(calculatePrice())}
                     </span>
                   </div>

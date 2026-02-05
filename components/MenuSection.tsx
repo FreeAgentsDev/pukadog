@@ -105,11 +105,11 @@ export default function MenuSection({ onAddToCart }: MenuSectionProps) {
   }
 
   return (
-    <section id="menu" className="py-20 bg-white">
+    <section id="menu" className="py-20 bg-pukadog-beigeLight">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Nuestro Menú</h2>
+        <h2 className="section-title">Nuestro menú</h2>
         <p className="section-subtitle">
-          Deliciosos puka dogs preparados con ingredientes frescos y de la más alta calidad
+          Ingredientes frescos, salsas naturales y pan artesanal. Calidad sin excesos.
         </p>
 
         {/* Category Filter */}
@@ -120,8 +120,8 @@ export default function MenuSection({ onAddToCart }: MenuSectionProps) {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeCategory === category
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-pukadog-ink text-pukadog-beige'
+                  : 'bg-white/80 text-pukadog-inkLight hover:bg-pukadog-beigeDark/30 border border-pukadog-beigeDark/20'
               }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -134,13 +134,13 @@ export default function MenuSection({ onAddToCart }: MenuSectionProps) {
           {filteredItems.map((item) => (
             <div key={item.id} className="card group">
               {item.popular && (
-                <div className="absolute top-4 right-4 z-10 bg-secondary-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                  ⭐ Popular
+                <div className="absolute top-4 right-4 z-10 bg-pukadog-ink text-pukadog-beige px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Popular
                 </div>
               )}
               
               {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-primary-200 to-secondary-200 overflow-hidden">
+              <div className="relative h-48 bg-pukadog-beigeDark/20 overflow-hidden">
                 {item.image && item.image.startsWith('/images/instagram/') ? (
                   <img
                     src={item.image}
@@ -152,14 +152,14 @@ export default function MenuSection({ onAddToCart }: MenuSectionProps) {
                     <span className="text-6xl">🌭</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300"></div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
-                <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
+                <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">{item.name}</h3>
+                <p className="text-pukadog-inkLight mb-4 text-sm">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary-600">
+                  <span className="text-xl font-bold text-pukadog-ink">
                     {formatPrice(item.price)}
                   </span>
                   <button

@@ -27,52 +27,52 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="nosotros" className="py-20 bg-white">
+    <section id="nosotros" className="py-20 bg-pukadog-beige">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="section-title">Sobre PukaDog</h2>
-          <p className="section-subtitle">
-            "Menos excesos, más bienestar" - Reinventamos el clásico puka dog con salsas naturales, 
-            ingredientes frescos, pan artesanal de masa madre y salchichas vegetarianas llenas de sabor. 
-            Porque comer rico también puede ser saludable.
+          <h2 className="section-title">Sobre Pukadog</h2>
+          <p className="slogan-serif text-xl md:text-2xl mb-4">
+            Menos excesos, más bienestar
+          </p>
+          <p className="section-subtitle mb-0">
+            Reinventamos el hotdog con salsas naturales, ingredientes frescos, 
+            pan artesanal de masa madre y opciones vegetarianas. Comer rico también puede ser consciente.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mb-4">
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-pukadog-ink text-pukadog-beige rounded-full mb-4">
+                <feature.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-bold text-pukadog-ink mb-2 font-display">{feature.title}</h3>
+              <p className="text-pukadog-inkLight">{feature.description}</p>
             </div>
           ))}
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="card p-8 md:p-12">
+          <div className="card p-8 md:p-12 bg-white/90">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Nuestra Filosofía
+                <h3 className="text-3xl font-bold text-pukadog-ink mb-4 font-display">
+                  Nuestra filosofía
                 </h3>
-                <p className="text-gray-600 mb-4">
-                  Comer algo en PukaDog es más como un ritual. Es relentizar, es saborear, 
-                  es sentir cada ingrediente, es una pausa consciente, es como un oasis 
+                <p className="text-pukadog-inkLight mb-4 font-serif italic">
+                  Comer en Pukadog es un ritual. Es relentizar, saborear, 
+                  sentir cada ingrediente. Una pausa consciente; un oasis 
                   en un mundo de excesos.
                 </p>
-                <p className="text-gray-600 mb-4">
-                  Queremos que hagas una pausa para percibir cada ingrediente. Usamos pan 
-                  artesanal de masa madre tipo Brioche y harina integral cero azúcar, 
+                <p className="text-pukadog-inkLight mb-4">
+                  Pan artesanal de masa madre tipo brioche, harina integral sin azúcar, 
                   salsas naturales y salchichas vegetarianas llenas de sabor.
                 </p>
-                <p className="text-gray-600">
-                  Nuestro compromiso es ofrecerte deliciosos, saludables y sin culpas. 
-                  Una propuesta sin excesos para que disfrutes cada bocado.
+                <p className="text-pukadog-inkLight">
+                  Delicioso, consciente y sin culpas. Una propuesta sin excesos para disfrutar cada bocado.
                 </p>
               </div>
-              <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-xl overflow-hidden">
+              <div className="relative h-64 md:h-80 bg-pukadog-beigeDark/30 rounded-xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-8xl">🌭</span>
                 </div>
