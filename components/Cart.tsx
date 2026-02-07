@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import Image from 'next/image'
 import { FiX, FiTrash2, FiShoppingBag } from 'react-icons/fi'
 
 // Número WhatsApp Pukadog (Colombia) para enlace universal móvil/desktop
@@ -72,6 +73,7 @@ export default function Cart({
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-pukadog-beigeDark/20">
             <h2 className="text-2xl font-bold text-pukadog-ink flex items-center gap-2 font-display">
+              <Image src="/logo.png" alt="" width={32} height={32} className="object-contain" />
               <FiShoppingBag className="w-6 h-6" />
               Carrito
             </h2>

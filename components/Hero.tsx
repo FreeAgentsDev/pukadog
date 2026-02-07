@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { FiArrowDown } from 'react-icons/fi'
 import { useInstagramData } from '@/hooks/useInstagramData'
 
@@ -20,7 +21,17 @@ export default function Hero() {
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Líneas decorativas estilo logo */}
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/logo.png"
+              alt="Pukadog"
+              width={120}
+              height={120}
+              className="object-contain drop-shadow-sm"
+              priority
+            />
+          </div>
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="block w-12 h-px bg-pukadog-ink/30" />
             <span className="text-xs uppercase tracking-[0.25em] text-pukadog-inkLight font-light">
@@ -29,7 +40,7 @@ export default function Hero() {
             <span className="block w-12 h-px bg-pukadog-ink/30" />
           </div>
 
-          {/* Main Heading - tipografía estilo Pukadog */}
+          {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-pukadog-ink mb-4 font-display tracking-tight">
             Pukadog
           </h1>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { FiMenu, FiX, FiShoppingCart } from 'react-icons/fi'
 
 interface HeaderProps {
@@ -40,23 +41,31 @@ export default function Header({ cartCount, onCartClick }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-pukadog-beige/98 shadow-sm border-b border-pukadog-beigeDark/20'
-          : 'bg-pukadog-beige/95 backdrop-blur-sm'
+          ? 'bg-pukadog-beige/97 backdrop-blur-md shadow-md border-b border-pukadog-beigeDark/25'
+          : 'bg-pukadog-beige/85 backdrop-blur-md border-b border-pukadog-beigeDark/10'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo - estilo del logo Pukadog */}
-          <div className="flex items-center gap-3">
+          {/* Logo */}
+          <a href="#inicio" className="flex items-center gap-3 shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Pukadog"
+              width={48}
+              height={48}
+              className="object-contain"
+              priority
+            />
             <div className="text-left">
-              <h1 className="text-2xl font-bold text-pukadog-ink font-display tracking-tight">
+              <h1 className="text-xl font-bold text-pukadog-ink font-display tracking-tight">
                 Pukadog
               </h1>
               <p className="text-[10px] uppercase tracking-[0.2em] text-pukadog-ink font-light">
                 Hotdogs
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

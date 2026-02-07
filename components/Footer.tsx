@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { FiInstagram, FiPhone } from 'react-icons/fi'
 
 export default function Footer() {
@@ -11,11 +12,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <h3 className="text-xl font-bold font-display tracking-tight">
-                Pukadog
-              </h3>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-pukadog-beige/80">Hotdogs</p>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo.png"
+                alt="Pukadog"
+                width={44}
+                height={44}
+                className="object-contain"
+              />
+              <div>
+                <h3 className="text-xl font-bold font-display tracking-tight">
+                  Pukadog
+                </h3>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-pukadog-beige/80">Hotdogs</p>
+              </div>
             </div>
             <p className="slogan-serif text-sm not-italic text-pukadog-beige/90">
               Menos excesos, más bienestar.
