@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "username": "pukadogcolombia",
+    "fullName": "PukaDog Colombia",
+    "biography": "Los mejores puka dogs de Manizales 🌭 Deliciosos, frescos y con los mejores ingredientes. ¡Haz tu pedido ahora!",
+    "followers": 0,
+    "profilePic": null
+  },
+  "posts": [],
+  "colors": {
+    "primary": "#f97316",
+    "secondary": "#ef4444",
+    "accent": "#fbbf24",
+    "background": "#fff7ed"
+  },
+  "products": [],
+  "style": {
+    "isCasual": true,
+    "isColorful": true,
+    "hasFoodFocus": true,
+    "tone": "amigable y apetitoso"
+  }
+}
