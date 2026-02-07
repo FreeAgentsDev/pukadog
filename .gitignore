@@ -38,6 +38,4 @@ ig-analyzer/*_analysis.json
 ig-analyzer/__pycache__/
 *.pyc
 
-# Data files
-data/
-public/images/instagram/
+# Data files (instagram-analysis.json y public/images/instagram/ sí se suben para el despliegue)
