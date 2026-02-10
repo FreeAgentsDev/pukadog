@@ -34,6 +34,10 @@ export function useInstagramData() {
       try {
         const response = await fetch('/api/instagram')
         const instagramData = await response.json()
+        // No usar respuesta si es error o no tiene el formato esperado
+        if (instagramData?.error || !instagramData?.profile) {
+          throw new Error(instagramData?.error || 'Formato de datos inválido')
+        }
         setData(instagramData)
       } catch (error) {
         console.error('Error fetching Instagram data:', error)

@@ -55,7 +55,7 @@ export default function Hero() {
 
           {/* Descripción */}
           <p className="text-lg text-pukadog-inkLight mb-10 max-w-2xl mx-auto">
-            {data?.profile.biography || 'Hotdogs con salsas naturales, ingredientes frescos y pan artesanal. Una pausa consciente en cada bocado.'}
+            {data?.profile?.biography || 'Hotdogs con salsas naturales, ingredientes frescos y pan artesanal. Una pausa consciente en cada bocado.'}
           </p>
 
           {/* CTA Buttons */}

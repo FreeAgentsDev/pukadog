@@ -8,26 +8,49 @@ export async function GET() {
     const analysisPath = path.join(process.cwd(), 'data', 'instagram-analysis.json')
     
     if (fs.existsSync(analysisPath)) {
-      const analysis = JSON.parse(fs.readFileSync(analysisPath, 'utf-8'))
+      const raw = JSON.parse(fs.readFileSync(analysisPath, 'utf-8'))
       
+      // Normalizar: el archivo puede tener estructura plana (username, biography...) o con profile
+      const profile = raw.profile ?? {
+        username: raw.username ?? 'pukadogcolombia',
+        fullName: raw.full_name ?? 'PukaDog Colombia',
+        biography: raw.biography ?? '',
+        followers: raw.followers ?? 0,
+        profilePic: raw.profile_pic_url ?? null,
+      }
+
       // Corregir rutas de imágenes para Next.js
-      if (analysis.posts) {
-        analysis.posts = analysis.posts.map((post: any) => ({
-          ...post,
-          image_urls: post.image_urls?.map((img: string) => 
-            img.replace('../public', '').replace('public/', '/')
-          ) || []
-        }))
+      const posts = raw.posts?.map((post: any) => ({
+        ...post,
+        image_urls: post.image_urls?.map((img: string) =>
+          img.replace('../public', '').replace('public/', '/')
+        ) || []
+      })) ?? []
+
+      const products = (raw.products ?? []).map((product: any) => ({
+        ...product,
+        image: product.image?.replace('../public', '').replace('public/', '/') || null
+      }))
+
+      const response = {
+        profile,
+        posts,
+        colors: raw.colors ?? {
+          primary: '#f97316',
+          secondary: '#ef4444',
+          accent: '#fbbf24',
+          background: '#fff7ed',
+        },
+        products,
+        style: raw.style ?? {
+          isCasual: true,
+          isColorful: true,
+          hasFoodFocus: true,
+          tone: 'amigable y apetitoso',
+        },
       }
-      
-      if (analysis.products) {
-        analysis.products = analysis.products.map((product: any) => ({
-          ...product,
-          image: product.image?.replace('../public', '').replace('public/', '/') || null
-        }))
-      }
-      
-      return NextResponse.json(analysis)
+
+      return NextResponse.json(response)
     }
 
     // Datos por defecto basados en el estilo de PukaDog
