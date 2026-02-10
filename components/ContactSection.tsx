@@ -95,28 +95,30 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Mapa */}
             <div className="card p-6 h-full">
               <h3 className="text-xl font-bold text-pukadog-ink mb-4 font-display">Encuéntranos</h3>
-              <div className="relative h-96 bg-pukadog-beigeDark/20 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <FiMapPin className="w-16 h-16 text-pukadog-ink mx-auto mb-4" />
-                    <p className="text-pukadog-inkLight font-medium">Calle 63 # 24-41</p>
-                    <p className="text-sm text-pukadog-inkMuted mt-2">
-                      Barrio Palogrande, Manizales
-                    </p>
-                  </div>
-                </div>
+              <div className="relative h-96 rounded-lg overflow-hidden bg-pukadog-beigeDark/10">
+                <iframe
+                  src="https://www.google.com/maps?q=Calle+63+24-41+Manizales+Colombia&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación Pukadog - Calle 63 # 24-41, Manizales"
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
               <div className="mt-4">
                 <a
-                  href="https://www.instagram.com/pukadogcolombia/"
+                  href="https://www.google.com/maps/search/Calle+63+24-41+Manizales"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center block"
                 >
-                  Ver en Instagram
+                  Abrir en Google Maps
                 </a>
               </div>
             </div>
